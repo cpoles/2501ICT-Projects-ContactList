@@ -63,12 +63,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let point2D = self.detailItem as? Point2D { // if the item is a point2D
-            if let label = self.detailDescriptionLabel {
-                point2D.x = 1
-                point2D.y = 2
+        if let contact = self.detailItem as? ContactListEntry { // if the item is a ContactListEntryt
+            if let firstName = self.textFirstName, let middleName = self.textMiddleName,
+            let lastName = self.textLastName, let yearOfBirth = self.textYearOfBirth ,let phoneNumber = self.textPhoneNumber, let address = self.textAddress
+            {
                 delegate?.displayObjectHasChanged() // refreshes the table view when back to the master view
-                label.text = point2D.description
+                firstName.text = contact.firstName
+                middleName.text = contact.middleName
+                lastName.text = contact.lastName
+                phoneNumber.text = contact.phoneNumber
+                yearOfBirth.text = "\(contact.yearOfBirth!)"
+                address.text = contact.address
             }
         }
     }
