@@ -10,6 +10,8 @@ import UIKit
 
 class MasterTableViewCell: UITableViewCell {
     
+    // MARK: Properties
+    
     @IBOutlet weak var labelFullName: UILabel!
     
     @IBOutlet weak var labelPhoneNumber: UILabel!

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DetailViewControllerDelegate {
+    func displayObjectHasChanged()
+}
+
 class DetailViewController: UIViewController, UITextFieldDelegate {
 
     
@@ -23,7 +27,25 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textAddress: UITextField!
     
-    var contact: ContactListEntry?
+    var delegate : DetailViewControllerDelegate?
+    
+    var detailItem: AnyObject? {
+        didSet {
+            // Update the view.
+            self.configureView()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.configureView()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     // MARK: UITextFieldDelegate
     
@@ -41,18 +63,19 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
     func configureView() {
         // Update the user interface for the detail item.
+        if let point2D = self.detailItem as? Point2D { // if the item is a point2D
+            if let label = self.detailDescriptionLabel {
+                point2D.x = 1
+                point2D.y = 2
+                delegate?.displayObjectHasChanged() // refreshes the table view when back to the master view
+                label.text = point2D.description
+            }
+        }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    // MARK: Navigation
+    
+    
 
 
 }
