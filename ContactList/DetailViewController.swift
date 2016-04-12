@@ -10,13 +10,25 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    
+    @IBOutlet weak var textFirstName: UITextField!
+    
+    @IBOutlet weak var textMiddleName: UITextField!
+    
+    @IBOutlet weak var textLastName: UITextField!
+    
+    @IBOutlet weak var textYearOfBirth: UITextField!
+    
+    @IBOutlet weak var textPhoneNumber: UITextField!
+    
+    @IBOutlet weak var textAddress: UITextField!
+    
+    
+    
+    
+    
 
-    var detailItem: AnyObject? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
+    
 
     func configureView() {
         // Update the user interface for the detail item.

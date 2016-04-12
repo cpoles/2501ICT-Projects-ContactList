@@ -54,11 +54,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter birth year here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnB-tc-nhq">
-                                <rect key="frame" x="118" y="117" width="457" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year of Birth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR8-of-a0Q">
                                 <rect key="frame" x="10" y="121" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -90,6 +85,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter birth year here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnB-tc-nhq">
+                                <rect key="frame" x="118" y="117" width="457" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -116,6 +116,14 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Enter Contact Details" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="textAddress" destination="Vss-u5-dhy" id="w3X-m6-xfO"/>
+                        <outlet property="textFirstName" destination="Ypn-qL-gKQ" id="OSu-Yt-3Wb"/>
+                        <outlet property="textLastName" destination="C7d-3X-z4U" id="f0R-co-F8b"/>
+                        <outlet property="textMiddleName" destination="F9c-C8-uiP" id="ua5-LG-wRk"/>
+                        <outlet property="textPhoneNumber" destination="Tdj-vb-bwa" id="PNR-9H-DpO"/>
+                        <outlet property="textYearOfBirth" destination="wnB-tc-nhq" id="3iX-82-604"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
