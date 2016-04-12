@@ -18,6 +18,7 @@
 		773C4E971CBCA95200CF0C98 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E951CBCA95200CF0C98 /* PersonTests.swift */; };
 		773C4E981CBCA95200CF0C98 /* ContactListEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E961CBCA95200CF0C98 /* ContactListEntryTests.swift */; };
 		773C4E9A1CBCA98A00CF0C98 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E991CBCA98A00CF0C98 /* Person.swift */; };
+		773C4E9C1CBCA9C100CF0C98 /* ContacListEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E9B1CBCA9C100CF0C98 /* ContacListEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		773C4E951CBCA95200CF0C98 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		773C4E961CBCA95200CF0C98 /* ContactListEntryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListEntryTests.swift; sourceTree = "<group>"; };
 		773C4E991CBCA98A00CF0C98 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		773C4E9B1CBCA9C100CF0C98 /* ContacListEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContacListEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				773C4E701CBCA90C00CF0C98 /* LaunchScreen.storyboard */,
 				773C4E731CBCA90C00CF0C98 /* Info.plist */,
 				773C4E991CBCA98A00CF0C98 /* Person.swift */,
+				773C4E9B1CBCA9C100CF0C98 /* ContacListEntry.swift */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				773C4E681CBCA90C00CF0C98 /* MasterViewController.swift in Sources */,
 				773C4E9A1CBCA98A00CF0C98 /* Person.swift in Sources */,
 				773C4E661CBCA90C00CF0C98 /* AppDelegate.swift in Sources */,
+				773C4E9C1CBCA9C100CF0C98 /* ContacListEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
