@@ -69,10 +69,11 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("DetailViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ContactDetailCell", forIndexPath: indexPath) as! MasterTableViewCell
         
         let object = objects[indexPath.row] as! ContactListEntry
-         = object.description
+        cell.labelFullName.text = object.fullName()
+        cell.labelPhoneNumber.text = object.phoneNumber
         return cell
     }
     

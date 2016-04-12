@@ -77,11 +77,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
-    // MARK: Navigation
-    
-    
-
-
+  
 }
 
