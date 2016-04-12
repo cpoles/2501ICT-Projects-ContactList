@@ -15,6 +15,8 @@
 		773C4E721CBCA90C00CF0C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773C4E701CBCA90C00CF0C98 /* LaunchScreen.storyboard */; };
 		773C4E7D1CBCA90C00CF0C98 /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E7C1CBCA90C00CF0C98 /* ContactListTests.swift */; };
 		773C4E881CBCA90C00CF0C98 /* ContactListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E871CBCA90C00CF0C98 /* ContactListUITests.swift */; };
+		773C4E971CBCA95200CF0C98 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E951CBCA95200CF0C98 /* PersonTests.swift */; };
+		773C4E981CBCA95200CF0C98 /* ContactListEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E961CBCA95200CF0C98 /* ContactListEntryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		773C4E831CBCA90C00CF0C98 /* ContactListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		773C4E871CBCA90C00CF0C98 /* ContactListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListUITests.swift; sourceTree = "<group>"; };
 		773C4E891CBCA90C00CF0C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		773C4E951CBCA95200CF0C98 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		773C4E961CBCA95200CF0C98 /* ContactListEntryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListEntryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 		773C4E7B1CBCA90C00CF0C98 /* ContactListTests */ = {
 			isa = PBXGroup;
 			children = (
+				773C4E951CBCA95200CF0C98 /* PersonTests.swift */,
+				773C4E961CBCA95200CF0C98 /* ContactListEntryTests.swift */,
 				773C4E7C1CBCA90C00CF0C98 /* ContactListTests.swift */,
 				773C4E7E1CBCA90C00CF0C98 /* Info.plist */,
 			);
@@ -269,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773C4E971CBCA95200CF0C98 /* PersonTests.swift in Sources */,
 				773C4E7D1CBCA90C00CF0C98 /* ContactListTests.swift in Sources */,
+				773C4E981CBCA95200CF0C98 /* ContactListEntryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
