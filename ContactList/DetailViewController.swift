@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var textFirstName: UITextField!
@@ -23,12 +23,21 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var textAddress: UITextField!
     
+    var contact: ContactListEntry?
     
+    // MARK: UITextFieldDelegate
     
-    
-    
-
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        
+        textFirstName.resignFirstResponder()
+        textPhoneNumber.resignFirstResponder()
+        textMiddleName.resignFirstResponder()
+        textLastName.resignFirstResponder()
+        textAddress.resignFirstResponder()
+        textYearOfBirth.resignFirstResponder()
+        return true
+    }
 
     func configureView() {
         // Update the user interface for the detail item.

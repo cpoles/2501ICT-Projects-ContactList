@@ -20,6 +20,7 @@
 		773C4E9A1CBCA98A00CF0C98 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E991CBCA98A00CF0C98 /* Person.swift */; };
 		773C4E9C1CBCA9C100CF0C98 /* ContacListEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E9B1CBCA9C100CF0C98 /* ContacListEntry.swift */; };
 		773C4E9E1CBCA9FB00CF0C98 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E9D1CBCA9FB00CF0C98 /* ContactList.swift */; };
+		773C4EA01CBCB5B900CF0C98 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C4E9F1CBCB5B900CF0C98 /* MasterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		773C4E991CBCA98A00CF0C98 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		773C4E9B1CBCA9C100CF0C98 /* ContacListEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContacListEntry.swift; sourceTree = "<group>"; };
 		773C4E9D1CBCA9FB00CF0C98 /* ContactList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
+		773C4E9F1CBCB5B900CF0C98 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				773C4E651CBCA90C00CF0C98 /* AppDelegate.swift */,
 				773C4E671CBCA90C00CF0C98 /* MasterViewController.swift */,
+				773C4E9F1CBCB5B900CF0C98 /* MasterTableViewCell.swift */,
 				773C4E691CBCA90C00CF0C98 /* DetailViewController.swift */,
 				773C4E6B1CBCA90C00CF0C98 /* Main.storyboard */,
 				773C4E6E1CBCA90C00CF0C98 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 			files = (
 				773C4E9E1CBCA9FB00CF0C98 /* ContactList.swift in Sources */,
 				773C4E6A1CBCA90C00CF0C98 /* DetailViewController.swift in Sources */,
+				773C4EA01CBCB5B900CF0C98 /* MasterTableViewCell.swift in Sources */,
 				773C4E681CBCA90C00CF0C98 /* MasterViewController.swift in Sources */,
 				773C4E9A1CBCA98A00CF0C98 /* Person.swift in Sources */,
 				773C4E661CBCA90C00CF0C98 /* AppDelegate.swift in Sources */,
