@@ -54,19 +54,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year of Birth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR8-of-a0Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year of Birth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR8-of-a0Q">
                                 <rect key="frame" x="10" y="121" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCs-7y-Yg0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCs-7y-Yg0">
                                 <rect key="frame" x="58" y="168" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRG-dE-jcf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRG-dE-jcf">
                                 <rect key="frame" x="42" y="215" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,29 +93,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tdj-vb-bwa" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="100" id="0Nu-yo-xNS"/>
                             <constraint firstItem="Vss-u5-dhy" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="98" id="1XR-OR-igK"/>
+                            <constraint firstItem="FRG-dE-jcf" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="22" id="5Go-gY-RY6"/>
                             <constraint firstItem="wnB-tc-nhq" firstAttribute="top" secondItem="C7d-3X-z4U" secondAttribute="bottom" constant="14" id="5cE-zm-nuj"/>
-                            <constraint firstItem="wnB-tc-nhq" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="53" id="6FC-I4-0go"/>
                             <constraint firstItem="F9c-C8-uiP" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="183" id="9Lf-Md-xQc"/>
-                            <constraint firstItem="r3I-qZ-Z1Z" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="12" id="CgG-sr-wLT"/>
                             <constraint firstItem="wnB-tc-nhq" firstAttribute="top" secondItem="F9c-C8-uiP" secondAttribute="bottom" constant="14" id="DWC-h9-fhf"/>
                             <constraint firstItem="wnB-tc-nhq" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="98" id="Edd-9a-fec"/>
                             <constraint firstItem="F9c-C8-uiP" firstAttribute="leading" secondItem="Ypn-qL-gKQ" secondAttribute="trailing" constant="22" id="Kje-wf-Rr8"/>
+                            <constraint firstItem="wnB-tc-nhq" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="97" id="LBt-xY-lv0"/>
                             <constraint firstItem="C7d-3X-z4U" firstAttribute="leading" secondItem="F9c-C8-uiP" secondAttribute="trailing" constant="24" id="N8C-uN-H7G"/>
+                            <constraint firstItem="FRG-dE-jcf" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="195" id="OaY-mQ-lJX"/>
                             <constraint firstItem="C7d-3X-z4U" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="270" id="Q4i-6g-X2v"/>
                             <constraint firstItem="wnB-tc-nhq" firstAttribute="top" secondItem="Ypn-qL-gKQ" secondAttribute="bottom" constant="14" id="Q6q-2m-Xo7"/>
+                            <constraint firstItem="YR8-of-a0Q" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="101" id="Reo-4i-Gky"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vss-u5-dhy" secondAttribute="trailing" constant="5" id="SMU-FT-tfs"/>
+                            <constraint firstItem="YR8-of-a0Q" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="-10" id="dqS-Pe-XdT"/>
+                            <constraint firstItem="LCs-7y-Yg0" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="148" id="eyW-Lf-H96"/>
                             <constraint firstItem="Ypn-qL-gKQ" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="98" id="gm9-vG-1kb"/>
+                            <constraint firstItem="Vss-u5-dhy" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="191" id="hEl-dm-RJh"/>
+                            <constraint firstItem="Tdj-vb-bwa" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="144" id="hgO-as-Fhh"/>
                             <constraint firstItem="Tdj-vb-bwa" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="98" id="lNp-HG-cRF"/>
+                            <constraint firstItem="r3I-qZ-Z1Z" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="56" id="oM4-Nz-zYv"/>
+                            <constraint firstItem="LCs-7y-Yg0" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="38" id="sbB-rk-dxi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tdj-vb-bwa" secondAttribute="trailing" constant="5" id="sli-pz-Dmc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wnB-tc-nhq" secondAttribute="trailing" constant="5" id="tyo-u2-vM0"/>
-                            <constraint firstItem="Vss-u5-dhy" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="147" id="v9E-ss-iMY"/>
                             <constraint firstItem="r3I-qZ-Z1Z" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="40" id="xDy-an-UUA"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Enter Contact Details" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="textAddress" destination="Vss-u5-dhy" id="w3X-m6-xfO"/>
                         <outlet property="textFirstName" destination="Ypn-qL-gKQ" id="OSu-Yt-3Wb"/>
@@ -127,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981" y="109"/>
+            <point key="canvasLocation" x="1039" y="123"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -159,44 +165,45 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3p-5u-6gb">
-                                            <rect key="frame" x="8" y="30" width="100" height="26"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlM-ck-ncg">
+                                            <rect key="frame" x="469" y="32" width="115" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWS-m6-CBR">
-                                            <rect key="frame" x="477" y="33" width="115" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW3-Qj-JoW">
+                                            <rect key="frame" x="24" y="30" width="104" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="DWS-m6-CBR" firstAttribute="top" secondItem="Cg4-sS-ng6" secondAttribute="topMargin" constant="25" id="6Cg-KG-NXs"/>
-                                        <constraint firstItem="P3p-5u-6gb" firstAttribute="top" secondItem="Cg4-sS-ng6" secondAttribute="topMargin" constant="22" id="RoT-Dk-PNk"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="DWS-m6-CBR" secondAttribute="bottom" constant="22.5" id="S8e-dF-VaC"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="P3p-5u-6gb" secondAttribute="leading" id="eoI-Fw-Zqg"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="P3p-5u-6gb" secondAttribute="bottom" constant="20.5" id="u8Z-mx-BgE"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="DWS-m6-CBR" secondAttribute="trailing" id="xiz-kS-9SU"/>
+                                        <constraint firstItem="uW3-Qj-JoW" firstAttribute="leading" secondItem="Cg4-sS-ng6" secondAttribute="leadingMargin" constant="16" id="0L4-vN-lYx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="RlM-ck-ncg" secondAttribute="trailing" constant="8" id="2Tu-aX-4qu"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RlM-ck-ncg" secondAttribute="bottom" constant="23.5" id="JLN-Qt-LNI"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="uW3-Qj-JoW" secondAttribute="bottom" constant="25.5" id="MeN-MR-p7h"/>
+                                        <constraint firstItem="uW3-Qj-JoW" firstAttribute="top" secondItem="Cg4-sS-ng6" secondAttribute="topMargin" constant="22" id="Rnc-jT-Nq4"/>
+                                        <constraint firstItem="RlM-ck-ncg" firstAttribute="top" secondItem="Cg4-sS-ng6" secondAttribute="topMargin" constant="24" id="oIQ-t3-1PY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="labelFullName" destination="P3p-5u-6gb" id="I8L-z5-aSr"/>
-                                    <outlet property="labelPhoneNumber" destination="DWS-m6-CBR" id="NPa-16-Oo9"/>
+                                    <outlet property="labelFullName" destination="uW3-Qj-JoW" id="ZUr-eZ-nG6"/>
+                                    <outlet property="labelPhoneNumber" destination="RlM-ck-ncg" id="NhU-2r-jYJ"/>
+                                    <segue destination="JEX-9P-axG" kind="showDetail" identifier="showDetail" id="VKx-fG-did"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
-                            <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
+                            <outlet property="delegate" destination="7bK-jq-Zjz" id="eh4-OI-zQI"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ua6-P1-K25">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hSb-aK-wb2">
                             <connections>
-                                <segue destination="JEX-9P-axG" kind="presentation" identifier="AddContact" id="ic5-gT-fxH"/>
+                                <segue destination="JEX-9P-axG" kind="presentation" identifier="addContact" id="SsT-9k-7XU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -222,6 +229,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ic5-gT-fxH"/>
+        <segue reference="SsT-9k-7XU"/>
     </inferredMetricsTieBreakers>
 </document>

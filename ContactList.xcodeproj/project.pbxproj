@@ -113,8 +113,8 @@
 			children = (
 				773C4E651CBCA90C00CF0C98 /* AppDelegate.swift */,
 				773C4E671CBCA90C00CF0C98 /* MasterViewController.swift */,
-				773C4E9F1CBCB5B900CF0C98 /* MasterTableViewCell.swift */,
 				773C4E691CBCA90C00CF0C98 /* DetailViewController.swift */,
+				773C4E9F1CBCB5B900CF0C98 /* MasterTableViewCell.swift */,
 				773C4E6B1CBCA90C00CF0C98 /* Main.storyboard */,
 				773C4E6E1CBCA90C00CF0C98 /* Assets.xcassets */,
 				773C4E701CBCA90C00CF0C98 /* LaunchScreen.storyboard */,

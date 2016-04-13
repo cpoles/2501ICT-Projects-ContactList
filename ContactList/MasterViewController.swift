@@ -11,20 +11,21 @@ import UIKit
 
 class MasterViewController: UITableViewController, DetailViewControllerDelegate {
     
-    var detailViewController: DetailViewController? = nil
+    var detailViewController: DetailViewController?
     var objects: [AnyObject] = [ContactListEntry]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
-        
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(MasterViewController.insertNewObject(_:)))
-        self.navigationItem.rightBarButtonItem = addButton
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-        }
+//        
+//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(MasterViewController.insertNewObject(_:)))
+//        self.navigationItem.rightBarButtonItem = addButton
+//        if let split = self.splitViewController {
+//            let controllers = split.viewControllers
+//            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+//        }
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -38,7 +39,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     }
     
     func insertNewObject(sender: AnyObject) {
-        objects.insert(NSDate(), atIndex: 0)
+        objects.insert(ContactListEntry(firstName: "New", lastName: "Contact"), atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
@@ -48,13 +49,22 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] // as! Point2D
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                let object = objects[indexPath.row]
+                let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
                 controller.delegate = self // the master view controller is the delegate
             }
+        } else if segue.identifier == "addContact" {
+            let contact = ContactListEntry(firstName: "", lastName: "")
+            let controller = (segue.destinationViewController as! DetailViewController
+            controller.detailItem = contact
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.leftItemsSupplementBackButton = true
+            controller.delegate = self // the master view controller is the delegate
+            
+            print("Adding new contact")
         }
     }
     
@@ -70,7 +80,6 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactDetailCell", forIndexPath: indexPath) as! MasterTableViewCell
-        
         let object = objects[indexPath.row] as! ContactListEntry
         cell.labelFullName.text = object.fullName()
         cell.labelPhoneNumber.text = object.phoneNumber
@@ -91,12 +100,24 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         }
     }
     
-    //MARK: Function for delegate to update the master view
+    //MARK: Destination View Controller Functions
     
-    func displayObjectHasChanged() {
-        return tableView.reloadData()
+    @IBAction func destinationViewControllerIsFinished(segue: UIStoryboardSegue) {
+        let viewController = segue.sourceViewController as! DetailViewController
+        if let contact = viewController.detailItem {
+            print("Got \(contact)")
+        }
+        tableView.reloadData()
     }
     
+    func destinationviewControllerContentChanged(destinationViewController: DetailViewController) {
+        if let contact = destinationViewController.detailItem {
+            print("Got \(contact)")
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        tableView.reloadData()
+    }
+
 }
 
 
