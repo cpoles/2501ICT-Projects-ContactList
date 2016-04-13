@@ -13,6 +13,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     
     var detailViewController: DetailViewController?
     var objects: [AnyObject] = [ContactListEntry]()
+    var button = UIBarButtonItem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,10 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
+                controller.navigationItem.rightBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                controller.navigationItem.rightBarButtonItem = self.button
+                controller.navigationItem.rightBarButtonItem?.title = "Cancel"
+                controller.navigationItem.title = "Enter Contact Details"
                 controller.delegate = self // the master view controller is the delegate
             }
         } else if segue.identifier == "addContact" {
@@ -64,6 +69,10 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
             controller.detailItem = contact
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
             controller.navigationItem.leftItemsSupplementBackButton = true
+            controller.navigationItem.rightBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.rightBarButtonItem = self.button
+            controller.navigationItem.rightBarButtonItem?.title = "Cancel"
+            controller.navigationItem.title = "Enter Contact Details"
             controller.delegate = self // the master view controller is the delegate
             
             print("Adding new contact")
@@ -119,6 +128,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         }
         tableView.reloadData()
     }
+    
 
 }
 
