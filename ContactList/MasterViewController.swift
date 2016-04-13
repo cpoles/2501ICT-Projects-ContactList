@@ -13,7 +13,8 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     
     var detailViewController: DetailViewController?
     var objects: [AnyObject] = [ContactListEntry]()
-    var button = UIBarButtonItem()
+    let button = UIBarButtonItem()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +90,8 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         return objects.count
     }
     
+    // Function that sets the values on the Prototype Cell
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactDetailCell", forIndexPath: indexPath) as! MasterTableViewCell
         let object = objects[indexPath.row] as! ContactListEntry
@@ -111,15 +114,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         }
     }
     
-    //MARK: Destination View Controller Functions
-    
-    @IBAction func destinationViewControllerIsFinished(segue: UIStoryboardSegue) {
-        let viewController = segue.sourceViewController as! DetailViewController
-        if let contact = viewController.detailItem {
-            print("Got \(contact)")
-        }
-        tableView.reloadData()
-    }
+    //MARK: Destination View Controller Function
     
     func destinationviewControllerContentChanged(destinationViewController: DetailViewController) {
         if let contact = destinationViewController.detailItem {

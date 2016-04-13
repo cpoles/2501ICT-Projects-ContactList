@@ -13,7 +13,9 @@ protocol DetailViewControllerDelegate {
 }
 
 class DetailViewController: UIViewController, UITextFieldDelegate {
-
+    
+    
+    // MARK: Properties
     
     @IBOutlet weak var textFirstName: UITextField!
     
