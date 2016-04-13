@@ -58,7 +58,9 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
             }
         } else if segue.identifier == "addContact" {
             let contact = ContactListEntry(firstName: "", lastName: "")
-            let controller = (segue.destinationViewController as! DetailViewController
+            objects.append(contact)
+            print("object created.")
+            let controller = segue.destinationViewController as! DetailViewController
             controller.detailItem = contact
             controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
             controller.navigationItem.leftItemsSupplementBackButton = true

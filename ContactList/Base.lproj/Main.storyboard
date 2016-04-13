@@ -203,7 +203,7 @@
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hSb-aK-wb2">
                             <connections>
-                                <segue destination="JEX-9P-axG" kind="presentation" identifier="addContact" id="SsT-9k-7XU"/>
+                                <segue destination="JEX-9P-axG" kind="showDetail" identifier="addContact" id="SsT-9k-7XU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
