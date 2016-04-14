@@ -73,14 +73,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         textPhoneNumber.resignFirstResponder()
         return true
     }
+    
+    // MARK: Methods
 
     func configureView() {
-        // Update the user interface for the detail item
+        // set the contact object by downcasting the detailItem property
         contact = (self.detailItem as! ContactListEntry)
         
         if let firstName = self.textFirstName, let middleName = self.textMiddleName,
             let lastName = self.textLastName, let yearOfBirth = self.textYearOfBirth ,let phoneNumber = self.textPhoneNumber, let address = self.textAddress
         {
+            // load text boxes with corresponding data
             firstName.text = contact!.firstName
             middleName.text = contact!.middleName
             lastName.text = contact!.lastName
@@ -98,6 +101,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     override func viewDidDisappear(animated: Bool) {
         print("bye")
     }
+    
+    // MARK: Subviews Actions
     
     @IBAction func cancelButton(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
