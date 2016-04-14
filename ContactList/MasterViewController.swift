@@ -35,7 +35,6 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         // Dispose of any resources that can be recreated.
     }
     
-    
     // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -45,6 +44,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = object
                 controller.delegate = self // the master view controller is the delegate
+                print("showing detail...")
             }
         } else if segue.identifier == "addContact" {
                 let contact = ContactListEntry(firstName: "", lastName: "")
@@ -52,8 +52,9 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = contact 
                 controller.delegate = self // the master view controller is the delegate
-            }
             print("Adding new contact")
+            }
+        
     }
     
     // MARK: - Table View
