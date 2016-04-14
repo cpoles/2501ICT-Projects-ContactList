@@ -103,6 +103,18 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         tableView.reloadData()
     }
     
+    func destinationViewControllerNewContact(destinationViewController: DetailViewController) {
+        if let contact = destinationViewController.detailItem {
+            objects.append(contact)
+            print("object created.")
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            print("canceled create")
+        }
+        tableView.reloadData()
+    }
+    
+    
 } // end of MasterViewController Class
 
     

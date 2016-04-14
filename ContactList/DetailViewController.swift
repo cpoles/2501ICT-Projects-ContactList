@@ -10,6 +10,7 @@ import UIKit
 
 protocol DetailViewControllerDelegate {
     func destinationviewControllerContentChanged(destinationViewController: DetailViewController)
+    func destinationViewControllerNewContact(destinationViewController: DetailViewController)
 }
 
 class DetailViewController: UIViewController, UITextFieldDelegate {
