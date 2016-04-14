@@ -11,6 +11,8 @@ import UIKit
 
 class MasterViewController: UITableViewController, DetailViewControllerDelegate {
     
+    // MARK: Properties
+    
     var detailViewController: DetailViewController?
     var objects: [AnyObject] = [ContactListEntry]()
     let button = UIBarButtonItem()
@@ -54,12 +56,6 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
                 let object = objects[indexPath.row]
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
-                controller.navigationItem.rightBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.rightBarButtonItem = self.button
-                controller.navigationItem.rightBarButtonItem?.title = "Cancel"
-                controller.navigationItem.title = "Enter Contact Details"
                 controller.delegate = self // the master view controller is the delegate
             }
         } else if segue.identifier == "addContact" {
@@ -68,12 +64,6 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
             print("object created.")
             let controller = segue.destinationViewController as! DetailViewController
             controller.detailItem = contact
-            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-            controller.navigationItem.leftItemsSupplementBackButton = true
-            controller.navigationItem.rightBarButtonItem = self.splitViewController?.displayModeButtonItem()
-            controller.navigationItem.rightBarButtonItem = self.button
-            controller.navigationItem.rightBarButtonItem?.title = "Cancel"
-            controller.navigationItem.title = "Enter Contact Details"
             controller.delegate = self // the master view controller is the delegate
             
             print("Adding new contact")
@@ -115,6 +105,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     }
     
     //MARK: Destination View Controller Function
+
     
     func destinationviewControllerContentChanged(destinationViewController: DetailViewController) {
         if let contact = destinationViewController.detailItem {
@@ -124,7 +115,10 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         tableView.reloadData()
     }
     
+} // end of MasterViewController Class
 
-}
+    
+
+
 
 
