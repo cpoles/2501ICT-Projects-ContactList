@@ -106,7 +106,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     // MARK: Subviews Actions
     
     @IBAction func cancelButton(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        delegate?.destinationviewControllerContentChanged(self)
         print("cancelled")
     }
     
@@ -117,7 +117,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         contact!.firstName = textFirstName.text!
         contact!.yearOfBirth = Int(textYearOfBirth.text!)
         contact!.address = textAddress.text!
-        delegate?.destinationviewControllerContentChanged(self)
+        delegate?.destinationViewControllerNewContact(self)
         print("back to main view...")
     }
     

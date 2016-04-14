@@ -48,8 +48,6 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
             }
         } else if segue.identifier == "addContact" {
             let contact = ContactListEntry(firstName: "", lastName: "")
-            objects.append(contact)
-            print("object created.")
             let controller = segue.destinationViewController as! DetailViewController
             controller.detailItem = contact
             controller.delegate = self // the master view controller is the delegate
@@ -109,7 +107,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
             print("object created.")
             dismissViewControllerAnimated(true, completion: nil)
         } else {
-            print("canceled create")
+            print("canceling create")
         }
         tableView.reloadData()
     }
