@@ -115,10 +115,6 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         
         tableView.reloadData()
     }
-    
-
-    
-    
 } // end of MasterViewController Class
 
     
