@@ -10,7 +10,6 @@ import UIKit
 
 protocol DetailViewControllerDelegate {
     func destinationviewControllerContentChanged(destinationViewController: DetailViewController)
-    func destinationViewControllerNewContact(destinationViewController: DetailViewController)
 }
 
 class DetailViewController: UIViewController, UITextFieldDelegate {
@@ -117,7 +116,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         contact!.firstName = textFirstName.text!
         contact!.yearOfBirth = Int(textYearOfBirth.text!)
         contact!.address = textAddress.text!
-        delegate?.destinationViewControllerNewContact(self)
+        delegate?.destinationviewControllerContentChanged(self)
         print("back to main view...")
     }
     

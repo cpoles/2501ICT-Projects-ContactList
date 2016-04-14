@@ -48,6 +48,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
             }
         } else if segue.identifier == "addContact" {
                 let contact = ContactListEntry(firstName: "", lastName: "")
+                objects.append(contact)
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = contact 
                 controller.delegate = self // the master view controller is the delegate
@@ -98,23 +99,9 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
             dismissViewControllerAnimated(true, completion: nil)
         }
         tableView.reloadData()
+        
     }
     
-    func destinationViewControllerNewContact(destinationViewController: DetailViewController) {
-        let controller = destinationViewController
-        let contact = controller.detailItem as! ContactListEntry
-        if contact.firstName != "" {
-            dismissViewControllerAnimated(true, completion: nil)
-            print("contact updated.")
-        }else {
-            let contact = controller.detailItem
-            objects.append(contact!)
-            dismissViewControllerAnimated(true, completion: nil)
-            print("contact added.")
-        }
-        
-        tableView.reloadData()
-    }
 } // end of MasterViewController Class
 
     
