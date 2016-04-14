@@ -95,14 +95,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 }
     
     override func viewWillDisappear(animated: Bool) {
-        contact!.middleName = textMiddleName.text!
-        contact!.lastName = textLastName.text!
-        contact!.phoneNumber = textPhoneNumber.text!
-        contact!.firstName = textFirstName.text!
-        contact!.yearOfBirth = Int(textYearOfBirth.text!)
-        contact!.address = textAddress.text!
-        delegate?.destinationviewControllerContentChanged(self)
-        print("leaving...")
+        
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -110,5 +103,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         print("bye")
         
     }
+    
+    @IBAction func cancelButton(sender: UIBarButtonItem) {
+        
+    }
+    
+    
+    @IBAction func backButton(sender: UIBarButtonItem) {
+        
+    }
+    
+    
 }
 
