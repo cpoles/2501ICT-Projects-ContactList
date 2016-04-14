@@ -90,9 +90,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gh-hT-0Mp">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="9vM-Cw-5F5">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="oQf-LM-Clz"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="cSM-98-ljV"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Gh-hT-0Mp" secondAttribute="trailing" constant="-20" id="00N-Ag-FUQ"/>
                             <constraint firstItem="Vss-u5-dhy" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="98" id="1XR-OR-igK"/>
                             <constraint firstItem="FRG-dE-jcf" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="22" id="5Go-gY-RY6"/>
                             <constraint firstItem="wnB-tc-nhq" firstAttribute="top" secondItem="C7d-3X-z4U" secondAttribute="bottom" constant="14" id="5cE-zm-nuj"/>
@@ -107,6 +117,7 @@
                             <constraint firstItem="wnB-tc-nhq" firstAttribute="top" secondItem="Ypn-qL-gKQ" secondAttribute="bottom" constant="14" id="Q6q-2m-Xo7"/>
                             <constraint firstItem="YR8-of-a0Q" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="101" id="Reo-4i-Gky"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vss-u5-dhy" secondAttribute="trailing" constant="5" id="SMU-FT-tfs"/>
+                            <constraint firstItem="2Gh-hT-0Mp" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="-20" id="c5V-Pf-D5Z"/>
                             <constraint firstItem="YR8-of-a0Q" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="-10" id="dqS-Pe-XdT"/>
                             <constraint firstItem="LCs-7y-Yg0" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="148" id="eyW-Lf-H96"/>
                             <constraint firstItem="Ypn-qL-gKQ" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="98" id="gm9-vG-1kb"/>
@@ -117,6 +128,7 @@
                             <constraint firstItem="LCs-7y-Yg0" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="38" id="sbB-rk-dxi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tdj-vb-bwa" secondAttribute="trailing" constant="5" id="sli-pz-Dmc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wnB-tc-nhq" secondAttribute="trailing" constant="5" id="tyo-u2-vM0"/>
+                            <constraint firstItem="2Gh-hT-0Mp" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="umU-m6-86N"/>
                             <constraint firstItem="r3I-qZ-Z1Z" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="40" id="xDy-an-UUA"/>
                         </constraints>
                     </view>
@@ -190,7 +202,7 @@
                                 <connections>
                                     <outlet property="labelFullName" destination="uW3-Qj-JoW" id="ZUr-eZ-nG6"/>
                                     <outlet property="labelPhoneNumber" destination="RlM-ck-ncg" id="NhU-2r-jYJ"/>
-                                    <segue destination="JEX-9P-axG" kind="showDetail" identifier="showDetail" id="VKx-fG-did"/>
+                                    <segue destination="JEX-9P-axG" kind="presentation" identifier="showDetail" id="VKx-fG-did"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -203,7 +215,7 @@
                     <navigationItem key="navigationItem" title="Contact List" id="Zdf-7t-Un8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hSb-aK-wb2">
                             <connections>
-                                <segue destination="JEX-9P-axG" kind="showDetail" identifier="addContact" id="SsT-9k-7XU"/>
+                                <segue destination="JEX-9P-axG" kind="presentation" identifier="addContact" id="SsT-9k-7XU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -229,6 +241,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SsT-9k-7XU"/>
+        <segue reference="VKx-fG-did"/>
     </inferredMetricsTieBreakers>
 </document>
