@@ -76,43 +76,43 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
     func configureView() {
         // Update the user interface for the detail item
-            contact = (self.detailItem as! ContactListEntry)
+        contact = (self.detailItem as! ContactListEntry)
         
-            if let firstName = self.textFirstName, let middleName = self.textMiddleName,
+        if let firstName = self.textFirstName, let middleName = self.textMiddleName,
             let lastName = self.textLastName, let yearOfBirth = self.textYearOfBirth ,let phoneNumber = self.textPhoneNumber, let address = self.textAddress
-            {
-                firstName.text = contact!.firstName
-                middleName.text = contact!.middleName
-                lastName.text = contact!.lastName
-                phoneNumber.text = contact!.phoneNumber
-                if let yOB = contact!.yearOfBirth {
-                    yearOfBirth.text = "\(yOB)"
-                } else {
-                    yearOfBirth.text = nil
-                }
-                address.text = contact!.address
+        {
+            firstName.text = contact!.firstName
+            middleName.text = contact!.middleName
+            lastName.text = contact!.lastName
+            phoneNumber.text = contact!.phoneNumber
+            if let yOB = contact!.yearOfBirth {
+                yearOfBirth.text = "\(yOB)"
+            } else {
+                yearOfBirth.text = nil
             }
-}
-    
-    override func viewWillDisappear(animated: Bool) {
-        
+            address.text = contact!.address
+        }
+        print("view refreshed")
     }
     
     override func viewDidDisappear(animated: Bool) {
-        
         print("bye")
-        
     }
     
     @IBAction func cancelButton(sender: UIBarButtonItem) {
-        
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    
     
     @IBAction func backButton(sender: UIBarButtonItem) {
-        
+        contact!.middleName = textMiddleName.text!
+        contact!.lastName = textLastName.text!
+        contact!.phoneNumber = textPhoneNumber.text!
+        contact!.firstName = textFirstName.text!
+        contact!.yearOfBirth = Int(textYearOfBirth.text!)
+        contact!.address = textAddress.text!
+        delegate?.destinationviewControllerContentChanged(self)
+        print("back to main view...")
     }
-    
     
 }
 
