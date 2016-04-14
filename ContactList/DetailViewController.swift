@@ -106,6 +106,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancelButton(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
+        print("cancelled")
     }
     
     @IBAction func backButton(sender: UIBarButtonItem) {

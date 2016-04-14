@@ -35,11 +35,6 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         // Dispose of any resources that can be recreated.
     }
     
-    func insertNewObject(sender: AnyObject) {
-        objects.insert(ContactListEntry(firstName: "New", lastName: "Contact"), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
     
     // MARK: - Segues
     
@@ -73,7 +68,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         return objects.count
     }
     
-    // Function that sets the values on the Prototype Cell
+    // Set the text values of the subviews on the Prototype Cell
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactDetailCell", forIndexPath: indexPath) as! MasterTableViewCell
