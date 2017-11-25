@@ -21,12 +21,12 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
 
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
+    override func viewWillAppear(_ animated: Bool) {
+        self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
     
@@ -37,11 +37,11 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     
     // MARK: - Segues
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row]
-                let controller = segue.destinationViewController as! DetailViewController
+                let controller = segue.destination as! DetailViewController
                 controller.detailItem = object
                 controller.delegate = self // the master view controller is the delegate
                 print("showing detail...")
@@ -49,7 +49,7 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
         } else if segue.identifier == "addContact" {
                 let contact = ContactListEntry(firstName: "", lastName: "")
                 objects.append(contact)
-                let controller = segue.destinationViewController as! DetailViewController
+                let controller = segue.destination as! DetailViewController
                 controller.detailItem = contact 
                 controller.delegate = self // the master view controller is the delegate
             print("Adding new contact")
@@ -59,34 +59,34 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     
     // MARK: - Table View
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
     
     // Set the text values of the subviews on the Prototype Cell
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ContactDetailCell", forIndexPath: indexPath) as! MasterTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactDetailCell", for: indexPath) as! MasterTableViewCell
         let object = objects[indexPath.row] as! ContactListEntry
         cell.labelFullName.text = object.fullName()
         cell.labelPhoneNumber.text = object.phoneNumber
         return cell
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            objects.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
@@ -94,10 +94,10 @@ class MasterViewController: UITableViewController, DetailViewControllerDelegate 
     //MARK: - UIDetailViewControllerDelegate
 
     
-    func destinationviewControllerContentChanged(destinationViewController: DetailViewController) {
+    func destinationviewControllerContentChanged(_ destinationViewController: DetailViewController) {
         if let contact = destinationViewController.detailItem {
             print("Got \(contact)")
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss(animated: true, completion: nil)
         }
         tableView.reloadData()
         

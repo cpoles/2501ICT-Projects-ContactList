@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DetailViewControllerDelegate {
-    func destinationviewControllerContentChanged(destinationViewController: DetailViewController)
+    func destinationviewControllerContentChanged(_ destinationViewController: DetailViewController)
 }
 
 class DetailViewController: UIViewController, UITextFieldDelegate {
@@ -62,7 +62,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: UITextFieldDelegate
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         
         textFirstName.resignFirstResponder()
@@ -98,18 +98,18 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         print("view refreshed")
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         print("bye")
     }
     
     // MARK: Subviews Actions
     
-    @IBAction func cancelButton(sender: UIBarButtonItem) {
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         delegate?.destinationviewControllerContentChanged(self)
         print("cancelled")
     }
     
-    @IBAction func backButton(sender: UIBarButtonItem) {
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
         contact!.middleName = textMiddleName.text!
         contact!.lastName = textLastName.text!
         contact!.phoneNumber = textPhoneNumber.text!

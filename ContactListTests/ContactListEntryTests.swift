@@ -16,7 +16,7 @@ class ContactListEntryTests: XCTestCase {
     let somePhone = "x55041"
     let someYearOfBirth = 1994
     var someAge: Int {
-        let currentYear = NSCalendar.currentCalendar().component(.Year, fromDate: NSDate())
+        let currentYear = (Calendar.current as NSCalendar).component(.year, from: Date())
         return currentYear - someYearOfBirth
     }
 
@@ -94,7 +94,7 @@ class ContactListEntryTests: XCTestCase {
     func testThatAgeWillBeCalculatedFromYearOfBirth() {
         let yearOfBirth = 1980
         let person = ContactListEntry(firstName: "Some", lastName: "Name", yearOfBirth: yearOfBirth)
-        let currentYear = NSCalendar.currentCalendar().component(.Year, fromDate: NSDate())
+        let currentYear = (Calendar.current as NSCalendar).component(.year, from: Date())
         let expectedAge = currentYear - yearOfBirth
         XCTAssertEqual(person.age, expectedAge)
         // now change yob and make sure age changes as well
@@ -108,7 +108,7 @@ class ContactListEntryTests: XCTestCase {
     func testThatYearOfBirthIsCalculatedFromAge() {
         let age = 20
         let person = ContactListEntry(firstName: "Some", lastName: "Name")
-        let currentYear = NSCalendar.currentCalendar().component(.Year, fromDate: NSDate())
+        let currentYear = (Calendar.current as NSCalendar).component(.year, from: Date())
         let expectedYearOfBirth = currentYear - age
         XCTAssertNil(person.yearOfBirth)
         person.age = age

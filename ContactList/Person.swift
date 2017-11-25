@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: Constants - setting dates
 
-let todaysDate = NSDate()
-let calendar = NSCalendar.currentCalendar()
-let currentYear = calendar.component(.Year, fromDate: todaysDate)
+let todaysDate = Date()
+let calendar = Calendar.current
+let currentYear = (calendar as NSCalendar).component(.year, from: todaysDate)
 
 
 // MARK: - Person class
